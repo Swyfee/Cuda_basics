@@ -10,7 +10,6 @@ inline cudaError_t checkCuda(cudaError_t result)
   return result;
 }
 
-
 void init(int *a, int N)
 {
   int i;
@@ -19,7 +18,6 @@ void init(int *a, int N)
     a[i] = i;
   }
 }
-
 
 
 __global__
@@ -63,9 +61,6 @@ if (err != cudaSuccess)
 {
   printf("Error: %s\n", cudaGetErrorString(err));
 }
-  
-  
-  
 
   init(a, N);
 
